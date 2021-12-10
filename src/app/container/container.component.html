@@ -1,1 +1,9 @@
-<p>container works!</p>
+<h5>Ci sono {{propertiesNumber}} proprieta`</h5>
+<div>
+  <p *ngFor="let name of (propertiesName$ | async)">{{name}}</p>
+</div>
+
+<div *ngFor="let value of (propertiesValue$ |async)">
+  <p>{{value.Name}}</p>
+  <p>{{value.Path}}</p>
+  </div>
